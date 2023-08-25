@@ -1,0 +1,18 @@
+@inherits RazorSliceHttpResult<SvelteMinimalApi.Models.FormAntiForgeryModel>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello from Razor Slices!</title>
+    <base href="/"/>
+    <link href="css/site.css" rel="stylesheet"/>
+</head>
+<body>
+
+<svelte-form tokenfieldname="@Model.TokenFieldName" tokenvalue="@Model.TokenValue"></svelte-form>
+
+<p>@Model.UserJson</p>
+
+<script src="/js/build/bundle.js" asp-append-version="true"></script>
+</body>
+</html>
